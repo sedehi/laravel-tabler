@@ -22,24 +22,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Sedehi\\Artist\\": "src/"
-        },
-        "files": [
-            "src/Libs/helpers.php"
-        ]
+            "Sedehi\\laravelTabler\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sedehi\\Artist\\Tests\\": "tests"
+            "Sedehi\\laravelTabler\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Sedehi\\Artist\\ArtistServiceProvider"
+                "Sedehi\\laravelTabler\\ArtistServiceProvider"
             ],
             "aliases": {
-                "Artist": "Sedehi\\Artist\\Facades\\Artist"
+                "Artist": "Sedehi\\laravelTabler\\Facades\\Artist"
             }
         }
     }
