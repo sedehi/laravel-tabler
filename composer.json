@@ -1,5 +1,5 @@
 {
-    "name": "sedehi/artist",
+    "name": "sedehi/laravel-tabler",
     "description": ":package_description",
     "license": "MIT",
     "authors": [
@@ -9,13 +9,10 @@
             "homepage": "https://sedehi.ir"
         }
     ],
-    "homepage": "https://github.com/sedehi/artist",
-    "keywords": ["Laravel", "Artist"],
+    "homepage": "https://github.com/sedehi/laravel-tabler",
+    "keywords": ["Laravel", "tabler"],
     "require": {
-        "illuminate/support": "~8",
-        "morilog/jalali": "3.*",
-        "intervention/image": "^2.5",
-        "sedehi/artist-console": "dev-master"
+        "illuminate/support": "~8"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0",
