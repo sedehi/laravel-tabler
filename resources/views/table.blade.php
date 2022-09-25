@@ -2,14 +2,7 @@
 @section('content')
 	<div class="page-header">
 		<div class="row align-items-center">
-			<div class="col">
-				<div class="page-pretitle">
-					Overview
-				</div>
-				<h2 class="page-title">
-					Dashboard
-				</h2>
-			</div>
+			<x-tabler::page-title title="Dashboard" pretitle="OVERVIEW"/>
 			<div class="col-auto ms-auto">
 				<div class="btn-list">
 					<a href="#" class="btn btn-primary">ایجاد</a>
