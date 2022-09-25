@@ -1,4 +1,4 @@
-<aside class="navbar navbar-vertical navbar-right navbar-expand-lg navbar-light">
+<aside class="navbar navbar-vertical navbar-expand-lg navbar-{{config('tabler.sidebar-color')}}">
 	<div class="container-fluid">
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
 			<span class="navbar-toggler-icon"></span>
