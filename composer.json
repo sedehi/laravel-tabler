@@ -12,7 +12,8 @@
     "homepage": "https://github.com/sedehi/laravel-tabler",
     "keywords": ["Laravel", "tabler"],
     "require": {
-        "illuminate/support": "~8|~9"
+        "illuminate/support": "~8|~9",
+        "okipa/laravel-form-components": "^1"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0",
@@ -34,7 +35,7 @@
         "laravel": {
             "providers": [
                 "Sedehi\\Tabler\\TablerServiceProvider"
-            ],
+            ]
         }
     }
 }

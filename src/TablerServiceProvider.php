@@ -27,6 +27,8 @@ class TablerServiceProvider extends ServiceProvider
     {
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'tabler');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'tabler');
+
+
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
         }
@@ -73,7 +75,7 @@ class TablerServiceProvider extends ServiceProvider
 
         // Publishing assets.
         $this->publishes([
-            __DIR__.'/../resources/assets' => public_path('tabler'),
+            __DIR__.'/../resources/build' => public_path('admin'),
         ], 'tabler-assets');
 
         // Publishing the translation files.
