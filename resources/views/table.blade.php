@@ -21,5 +21,5 @@
 			</div>
 		</div>
 	</div>
-	<x-tabler::table />
+	<x-tabler::table :items="$items" />
 @endsection
