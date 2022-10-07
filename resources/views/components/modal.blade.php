@@ -1,8 +1,11 @@
 <div class="modal modal-blur fade" id="modal-{{$name}}" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 		<div class="modal-content">
+			@if(empty($formMethod))
+				@php($formMethod = 'GET')
+			@endif
 			@if(!empty($formAction))
-				<form action="{{$formAction}}">
+				<form action="{{$formAction}}" method="{{$formMethod}}">
 			@endif
 			<div class="modal-header">
 				@isset($title)
@@ -21,7 +24,7 @@
 						<button type="submit" class="btn btn-primary me-auto">{{$submitText}}</button>
 					@endif
 				@endisset
-				<a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">لغو</a>
+				<a href="#" class="btn btn-secondry" data-bs-dismiss="modal">لغو</a>
 			</div>
 			@if(!empty($formAction))
 				</form>

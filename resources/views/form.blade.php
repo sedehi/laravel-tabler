@@ -1,7 +1,7 @@
 @extends('tabler::layout')
 @section('content')
 	<div class="page-header">
-		<x-tabler::page-title title="Dashboard" pretitle="OVERVIEW"/>
+		<x-tabler::page-title title="Dashboard"/>
 	</div>
 	<div class="col-12">
 		<form action="" method="post" class="card">
@@ -16,7 +16,6 @@
 					<x:form::select name="hobbies" :options="$options" :selected="[2, 3]" allowPlaceholderToBeSelected multiple/> {{-- You'll be able to selected the placeholder and the name will be converted to hobbies[] --}}
 					<x:form::checkbox name="newsletter_subscription" :checked="true"/>
 					<x:form::toggle-switch name="active" :checked="false" inline/>
-
 					<x:form::textarea id="custom-id" name="first_name"/>
 					<x:form::input name="name" caption="Please fill this input with your full name." />
 				</div>
