@@ -8,7 +8,7 @@
         <form class="card card-md" method="POST" action="#" autocomplete="off">
             @csrf
             <div class="card-body">
-                <h2 class="card-title text-center mb-4">@lang('tabler::auth.title')</h2>
+                <h2 class="card-title text-center mb-4">{{config('app.name')}}</h2>
                 <div class="mb-3">
                     <label class="form-label" for="email">@lang('validation.attributes.email')</label>
                     <input name="email" type="text" id="email" class="form-control @error('email') is-invalid @enderror" placeholder="@lang('validation.attributes.email')">
