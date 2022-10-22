@@ -1,7 +1,7 @@
 <!doctype html>
 @php($direction = config('tabler.dir'))
 <html lang="{{app()->getLocale()}}"  dir="{{$direction}}">
-@include('tabler::head')
+@include('tabler::partials.head')
 <body class="d-flex flex-column">
 <div class="page page-center">
     <div class="container-tight py-4">
