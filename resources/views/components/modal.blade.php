@@ -5,7 +5,7 @@
 				@php($formMethod = 'GET')
 			@endif
 			@if(!empty($formAction))
-				<form action="{{$formAction}}" method="{{$formMethod}}">
+				<form action="{{$formAction}}" id="modal-{{$name}}-form" method="{{$formMethod}}">
 			@endif
 			<div class="modal-header">
 				@isset($title)

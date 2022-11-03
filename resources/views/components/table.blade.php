@@ -1,12 +1,11 @@
-<div class="col-12">
 	<div class="card">
 		<div class="table-responsive">
 			<table class="table table-vcenter table-mobile-md card-table table-hover">
 				<thead>
 					<tr>
-						@if(!isset($withoutDelete))
+						@if(!isset($withoutSelect))
 							<th class="width-50">
-								<input class="form-check-input m-0 align-middle" type="checkbox">
+								<input class="form-check-input m-0 align-middle select-all" type="checkbox">
 							</th>
 						@endif
 						@foreach($headers as $header)
@@ -16,10 +15,10 @@
 				</thead>
 				<tbody>
 				@foreach($items as $item)
-					<tr>
-						@if(!isset($withoutDelete))
+					<tr @if(!empty($rowClass($item))) class="{{$rowClass($item)}}" @endif>
+						@if(!isset($withoutSelect))
 							<td>
-								<input class="form-check-input m-0 align-middle" value="{{$item->getKey()}}" type="checkbox">
+								<input class="form-check-input m-0 align-middle table-checkbox" value="{{$item->getKey()}}" name="id[]" type="checkbox">
 							</td>
 						@endif
 						@if(is_array($fields))
@@ -90,8 +89,16 @@
 			@endif
 		@endif
 </div>
-</div>
 
+@push('js')
+	<script>
+        $(document).ready(function() {
+            $('.select-all').change(function(e){
+                $(this).parents('table:first').find('td input:checkbox').prop('checked', this.checked);
+            });
+        });
+	</script>
+@endpush
 
 
 
