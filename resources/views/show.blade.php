@@ -30,7 +30,6 @@
 						<div class="datagrid-title">Creator</div>
 						<div class="datagrid-content">
 							<div class="d-flex align-items-center">
-								<span class="avatar avatar-xs me-2 avatar-rounded" style="background-image: url(./static/avatars/000m.jpg)"></span>
 								Paweł Kuna
 							</div>
 						</div>
