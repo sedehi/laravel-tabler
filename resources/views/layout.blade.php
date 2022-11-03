@@ -18,8 +18,9 @@
     </div>
 </div>
 </body>
-<script src="{{asset('admin/js/tabler.min.js')}}"></script>
 <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}"></script>
+<script src="{{asset('admin/js/tabler.min.js')}}"></script>
+<script src="{{asset('admin/js/custom.js')}}"></script>
 @stack('js')
 </body>
 </html>
