@@ -4,6 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>@yield('title')</title>
+	<link href="{{asset('admin/css/Vazirmatn-Variable-font-face.css')}}" rel="stylesheet"/>
 	<link href="{{asset('admin/css/tabler.rtl.min.css')}}" rel="stylesheet"/>
 	<link href="{{asset('admin/css/custom.css')}}" rel="stylesheet"/>
 </head>
