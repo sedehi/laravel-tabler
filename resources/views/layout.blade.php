@@ -6,8 +6,6 @@
 <div class="page">
     @include('tabler::partials.sidebar')
     <div class="page-wrapper">
-        <div class="container-fluid">
-        </div>
         <div class="page-body">
             <div class="container-fluid">
                 <div class="row row-deck row-cards">
