@@ -15,7 +15,7 @@
 				</thead>
 				<tbody>
 				@foreach($items as $item)
-					<tr @if(!empty($rowClass($item))) class="{{$rowClass($item)}}" @endif>
+					<tr @if(isset($rowClass) && !empty($rowClass($item))) class="{{$rowClass($item)}}" @endif>
 						@if(!isset($withoutSelect))
 							<td>
 								<input class="form-check-input m-0 align-middle table-checkbox" value="{{$item->getKey()}}" name="id[]" type="checkbox">
