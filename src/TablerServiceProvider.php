@@ -2,19 +2,8 @@
 
 namespace Sedehi\Tabler;
 
-use Exception;
-use Illuminate\Foundation\AliasLoader;
-use Illuminate\Http\Request;
-use Illuminate\Routing\Redirector;
-use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Morilog\Jalali\Jalalian;
-use Sedehi\Artist\Console\Command\PruneUploadTemporaryCommand;
-use Sedehi\Artist\Http\Middleware\Authenticate;
-use Sedehi\Artist\Http\Middleware\DefineGates;
-use Sedehi\Artist\Http\Middleware\Permission;
 
 class TablerServiceProvider extends ServiceProvider
 {
@@ -27,7 +16,6 @@ class TablerServiceProvider extends ServiceProvider
     {
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'tabler');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'tabler');
-
 
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
