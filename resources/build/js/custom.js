@@ -1,15 +1,20 @@
 $('.as-form').on('click',function(e){
     e.preventDefault();
     var form = document.createElement('form');
+    var method = $(this).data('method').toLowerCase();
+    if(method !== 'get'){
+        method = 'POST';
+    }
     $(form).css('style','none')
         .attr('action',$(this).data('action'))
-        .attr('method',$(this).data('method'))
+        .attr('method',method)
     $(form).appendTo($('body'));
-    $($('meta[name="csrf-token"]').attr('content')).appendTo(form);
     formData =$($(this).data('form')).serializeArray();
     formData.forEach(function(input){
         $("<input type='hidden' name="+input.name+" value="+input.value+" />").appendTo(form);
     })
+    $("<input type='hidden' name='_method' value="+$(this).data('method')+" />").appendTo(form);
+    $("<input type='hidden' name='_token' value="+$('meta[name="csrf-token"]').attr('content')+" />").appendTo(form);
     $(form).submit();
 });
 
