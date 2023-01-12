@@ -15,9 +15,16 @@
         </div>
     </div>
 </div>
+@if(session()->has('success'))
+    <x-tabler::toast message="{{session('success')}}" type="success" />
+@endif
+@if(session()->has('error'))
+    <x-tabler::toast message="{{session('error')}}" type="error" />
+@endif
 </body>
 <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}"></script>
 <script src="{{asset('admin/js/tabler.min.js')}}"></script>
+<script src="{{asset('admin/js/sweetalert2.all.min.js')}}"></script>
 <script src="{{asset('admin/js/custom.js')}}"></script>
 @stack('js')
 </body>

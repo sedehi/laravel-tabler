@@ -14,7 +14,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				@foreach($items as $item)
+				@forelse($items as $item)
 					<tr @if(isset($rowClass) && !empty($rowClass($item))) class="{{$rowClass($item)}}" @endif>
 						@if(!isset($withoutSelect))
 							<td>
@@ -54,7 +54,7 @@
 										@if(is_array($links))
 											<div class="dropdown">
 												<button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">
-													عملیات
+													@lang('tabler.actions')
 												</button>
 												<div class="dropdown-menu dropdown-menu-end">
 													@foreach($links as $link)
@@ -72,14 +72,18 @@
 						</td>
 						@endif
 					</tr>
-				@endforeach
+                @empty
+                    <tr>
+                        <td class="text-center" colspan="100">@lang('tabler.empty_table')</td>
+                    </tr>
+				@endforelse
 				</tbody>
 			</table>
 		</div>
 		@if($items->isNotEmpty())
 			@if($items instanceof Illuminate\Pagination\LengthAwarePaginator)
 				<div class="card-footer d-flex align-items-center">
-					<p class="m-0 text-muted d-none d-md-block d-lg-block">نمایش <span>{{$items->firstItem()}}</span> تا <span>{{$items->lastItem()}}</span> از <span>{{$items->total()}}</span> مورد</p>
+					<p class="m-0 text-muted d-none d-md-block d-lg-block">@lang('tabler.show') @endlang <span>{{$items->firstItem()}}</span> @lang('tabler.to') <span>{{$items->lastItem()}}</span> @lang('tabler.of') <span>{{$items->total()}}</span> @lang('tabler.entries')</p>
 					{!! $items->appends(request()->except('page'))->render('tabler::pagination.default') !!}
 				</div>
 			@elseif($items instanceof Illuminate\Pagination\Paginator)
@@ -87,6 +91,8 @@
 					{!! $items->appends(request()->except('page'))->render('tabler::pagination.sample') !!}
 				</div>
 			@endif
+        @else
+            <div class="card-footer d-flex align-items-center"></div>
 		@endif
 </div>
 

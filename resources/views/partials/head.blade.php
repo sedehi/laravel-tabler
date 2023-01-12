@@ -6,5 +6,6 @@
 	<title>@yield('title')</title>
 	<link href="{{asset('admin/css/Vazirmatn-Variable-font-face.css')}}" rel="stylesheet"/>
 	<link href="{{asset('admin/css/tabler.rtl.min.css')}}" rel="stylesheet"/>
+	<link href="{{asset('admin/css/sweetalert2.min.css')}}" rel="stylesheet"/>
 	<link href="{{asset('admin/css/custom.css')}}" rel="stylesheet"/>
 </head>
