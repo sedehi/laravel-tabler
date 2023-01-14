@@ -2,6 +2,7 @@
 
 namespace Sedehi\Tabler;
 
+use Faker\Core\File;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
