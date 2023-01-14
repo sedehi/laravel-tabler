@@ -68,6 +68,6 @@ class TablerServiceProvider extends ServiceProvider
             __DIR__.'/../resources/build' => public_path('admin'),
         ], 'tabler-assets');
 
-        $this->publishes([__DIR__.'/../lang' => base_path('lang')], 'lang');
+        $this->publishes([__DIR__.'/../lang' => base_path('lang')], 'tabler-lang');
     }
 }
