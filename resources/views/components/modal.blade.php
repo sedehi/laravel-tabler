@@ -24,7 +24,7 @@
 						<button type="submit" class="btn btn-primary me-auto">{{$submitText}}</button>
 					@endif
 				@endisset
-				<a href="#" class="btn btn-secondry" data-bs-dismiss="modal">لغو</a>
+				<a href="#" class="btn btn-secondry" data-bs-dismiss="modal">@lang('tabler.cancel')</a>
 			</div>
 			@if(!empty($formAction))
 				</form>
