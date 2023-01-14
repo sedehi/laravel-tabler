@@ -15,7 +15,7 @@ class TablerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'tabler');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'tabler');
 
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
@@ -31,7 +31,7 @@ class TablerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/tabler.php', 'tabler');
+        $this->mergeConfigFrom(__DIR__.'/../config/tabler.php', 'tabler');
     }
 
     /**
@@ -53,23 +53,23 @@ class TablerServiceProvider extends ServiceProvider
     {
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__ . '/../config/tabler.php' => config_path('tabler.php'),
+            __DIR__.'/../config/tabler.php' => config_path('tabler.php'),
         ], 'tabler-config');
 
         // Publishing the views.
         $this->publishes([
-            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/tabler'),
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/tabler'),
         ], 'tabler-views');
 
         $this->publishes([
-            __DIR__ . '/../resources/views/index.blade.php' => base_path('resources/admin/index.blade.php'),
+            __DIR__.'/../resources/views/index.blade.php' => base_path('resources/admin/index.blade.php'),
         ], 'tabler-index');
 
         // Publishing assets.
         $this->publishes([
-            __DIR__ . '/../resources/build' => public_path('admin'),
+            __DIR__.'/../resources/build' => public_path('admin'),
         ], 'tabler-assets');
 
-        $this->publishes([__DIR__ . '/../lang' => base_path('lang')], 'lang');
+        $this->publishes([__DIR__.'/../lang' => base_path('lang')], 'lang');
     }
 }

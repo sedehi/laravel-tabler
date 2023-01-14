@@ -1,4 +1,5 @@
 <?php
+
 return [
     'empty_table' => 'اطلاعاتی پیدا نشد',
     'actions' => 'عملیات',
