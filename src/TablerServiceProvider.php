@@ -60,6 +60,10 @@ class TablerServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views' => base_path('resources/views/vendor/tabler'),
         ], 'tabler-views');
 
+        $this->publishes([
+            __DIR__ . '/../resources/views/index.blade.php' => base_path('resources/admin'),
+        ], 'tabler-index');
+
         // Publishing assets.
         $this->publishes([
             __DIR__ . '/../resources/build' => public_path('admin'),
