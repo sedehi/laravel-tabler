@@ -6,6 +6,9 @@
     @php($canShow = true)
 @endif
 @isset($route)
+    @if(!isset($title))
+        @php($title = trans('permissions.'.$route))
+    @endif
     @if(auth(config('module.admin_guard'))->user()->hasRoute($route))
         @php($canShow = true)
     @else
