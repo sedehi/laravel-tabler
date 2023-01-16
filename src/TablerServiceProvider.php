@@ -52,7 +52,7 @@ class TablerServiceProvider extends ServiceProvider
     protected function bootForConsole()
     {
         // Publishing the configuration file.
-        $this->publishes([__DIR__.'/../config/tabler.php' => config_path('tabler.php')] ,'tabler-config');
+        $this->publishes([__DIR__.'/../config/tabler.php' => config_path('tabler.php')], 'tabler-config');
 
         // Publishing the views.
         $this->publishes([
