@@ -1,7 +1,8 @@
 @php($linkUrl = $link ?? '#')
 @php($hasChildren = false)
 @isset($route)
-	@php($linkUrl = route($route))
+{{--    @dd(auth(config('module.admin_guard'))->user()->hasRoute($route))--}}
+    @php($linkUrl = route($route))
 @endisset
 @isset($action)
 	@php($linkUrl = action($action))
