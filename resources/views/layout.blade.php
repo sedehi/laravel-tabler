@@ -5,6 +5,7 @@
 <body class="layout-fluid">
 <div class="page">
     @include('tabler::partials.sidebar')
+    @include('tabler::partials.header')
     <div class="page-wrapper">
         <div class="page-body">
             <div class="container-fluid">
