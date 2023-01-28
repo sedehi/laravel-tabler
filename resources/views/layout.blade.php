@@ -1,5 +1,8 @@
 <!doctype html>
-@php($direction = 'rtl')
+@php($direction = 'ltr')
+@if(in_array(app()->getLocale(),['fa','ar']))
+    @php($direction = 'rtl')
+@endif
 <html lang="{{app()->getLocale()}}"  dir="{{$direction}}">
 @include('tabler::partials.head')
 <body class="layout-fluid">
