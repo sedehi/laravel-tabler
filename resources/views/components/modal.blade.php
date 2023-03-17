@@ -24,6 +24,11 @@
 						<button type="submit" class="btn btn-primary me-auto">{{$submitText}}</button>
 					@endif
 				@endisset
+				@isset($resetBtn)
+                    @if($formMethod == 'GET')
+                        <a href="{{ request()->url() }}" class="btn btn-warning">@lang('tabler.reset')</a>
+                    @endif
+                @endisset
 				<a href="#" class="btn btn-secondry" data-bs-dismiss="modal">@lang('tabler.cancel')</a>
 			</div>
 			@if(!empty($formAction))
