@@ -29,6 +29,7 @@
 <script src="{{asset('admin/js/jquery-3.6.1.min.js')}}"></script>
 <script src="{{asset('admin/js/tabler.min.js')}}"></script>
 <script src="{{asset('admin/js/sweetalert2.all.min.js')}}"></script>
+<script src="{{asset('admin/libs/tinymce/tinymce.min.js')}}" defer></script>
 <script src="{{asset('admin/js/custom.js')}}"></script>
 @stack('js')
 </body>
